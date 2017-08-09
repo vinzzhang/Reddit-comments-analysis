@@ -1,4 +1,4 @@
-## Natural language preprocessing
+## Data refine and sentiment analysis
 
 import nltk, sys, re, string, datetime
 import numpy as np 
