@@ -97,8 +97,6 @@ def main():
 	count = hour.groupBy(['hour', 'polarity']).agg(f.count('polarity').alias('count'))
 	
 
-	init_ttest = stats.ttest_ind(count['hour'], count['polarity']) #pvalue=1.30055e-58 >0.05
-	print (init_ttest.pvalue)
 	output = count.select(
 		'hour',
 		'polarity',
