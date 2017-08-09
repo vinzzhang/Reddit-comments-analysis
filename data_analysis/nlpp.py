@@ -56,14 +56,14 @@ def sentiment_analysis(sentence):
 	if max(score) == neu:
 		return ' '
 	elif max(score) == pos:
-		return 'POG: ' + str(pos)
+		return 'POS: ' + str(pos)
 	elif max(score) == neg:
 		return 'NEG: ' + str(neg)
 
 
 def polarity_label(score):
 	if score.startswith('POG:'):
-		return 'POG'
+		return 'POS'
 	elif score.startswith('NEG:'):
 		return 'NEG'
 
