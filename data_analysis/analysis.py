@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 from scipy import stats
+from sklearn.metrics import r2_score
 from datetime import date
 
 
@@ -29,8 +30,10 @@ def main():
 	#chi-2
 	contingency = [day_, night_]
 	chi2, p, dof, expected = stats.chi2_contingency(contingency)
-	print(p) #very high, so there is no relations between the polarity 
-					   #of comments that people wrote and the daytime/evening
+	print(p)
+	
+	#Coefficient of Determination
+	#r2_score(time, polarity)
 
 	
 
